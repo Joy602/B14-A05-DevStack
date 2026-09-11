@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import StackCards from "./components/StackCards";
+import SelectedList from "./components/SelectedList";
 
 function App() {
+  const [selectedStacks, setSelectedStacks] = useState([]);
+
+  const handleSelect = (stack) => {
+    if (!selectedStacks.find((item) => item.id === stack.id)) {
+      setSelectedStacks([...selectedStacks, stack]);
+    }
+  };
+
+  const handleRemove = (id) => {
+    setSelectedStacks(selectedStacks.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navbar Component */}
       <Navbar />
 
-      {/* Hero Section Placeholder */}
+      {/* Hero Section */}
       <div className="text-center py-16 bg-white shadow-sm mb-8">
         <h1 className="text-4xl font-bold text-gray-800">
           Build Your Ultimate Dev Stack
@@ -19,8 +32,11 @@ function App() {
         </p>
       </div>
 
+      {/* Selected List / Summary Component */}
+      <SelectedList selectedStacks={selectedStacks} onRemove={handleRemove} />
+
       {/* Stack Cards Component */}
-      <StackCards />
+      <StackCards selectedStacks={selectedStacks} onSelect={handleSelect} />
     </div>
   );
 }
