@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import StackCards from "./components/StackCards";
-import SelectedList from "./components/SelectedList";
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import StackCards from './components/StackCards';
+import SelectedList from './components/SelectedList';
 
 function App() {
   const [selectedStacks, setSelectedStacks] = useState([]);
@@ -18,24 +18,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navbar Component */}
       <Navbar />
 
-      {/* Hero Section */}
       <div className="text-center py-16 bg-white shadow-sm mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">
-          Build Your Ultimate Dev Stack
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-800">Build Your Ultimate Dev Stack</h1>
         <p className="text-gray-600 mt-4 max-w-xl mx-auto">
-          Choose and customize the best modern technologies for your next web
-          application project with ease.
+          Choose and customize the best modern technologies for your next web application project with ease.
         </p>
       </div>
 
-      {/* Selected List / Summary Component */}
       <SelectedList selectedStacks={selectedStacks} onRemove={handleRemove} />
 
-      {/* Stack Cards Component */}
       <StackCards selectedStacks={selectedStacks} onSelect={handleSelect} />
     </div>
   );
