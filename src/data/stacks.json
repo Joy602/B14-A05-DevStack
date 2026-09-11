@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "React.js",
+    "category": "Frontend",
+    "description": "A JavaScript library for building user interfaces with component-based architecture.",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "name": "Node.js",
+    "category": "Backend",
+    "description": "JavaScript runtime built on Chrome's V8 engine for scalable backend services.",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400",
+    "rating": 4.7
+  },
+  {
+    "id": 3,
+    "name": "Tailwind CSS",
+    "category": "Styling",
+    "description": "A utility-first CSS framework for rapidly building modern custom designs.",
+    "price": 80,
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400",
+    "rating": 4.9
+  },
+  {
+    "id": 4,
+    "name": "MongoDB",
+    "category": "Database",
+    "description": "A flexible NoSQL database designed for modern web applications.",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400",
+    "rating": 4.6
+  }
+]

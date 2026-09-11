@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import StackCards from "./components/StackCards";
 
 function App() {
   return (
@@ -8,14 +9,18 @@ function App() {
       <Navbar />
 
       {/* Hero Section Placeholder */}
-      <div className="text-center py-20">
+      <div className="text-center py-16 bg-white shadow-sm mb-8">
         <h1 className="text-4xl font-bold text-gray-800">
-          Welcome to Dev Stack Builder
+          Build Your Ultimate Dev Stack
         </h1>
-        <p className="text-gray-600 mt-4">
-          Build your ultimate developer stack easily.
+        <p className="text-gray-600 mt-4 max-w-xl mx-auto">
+          Choose and customize the best modern technologies for your next web
+          application project with ease.
         </p>
       </div>
+
+      {/* Stack Cards Component */}
+      <StackCards />
     </div>
   );
 }
